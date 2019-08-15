@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: excel-demo
+  rabbitmq:
+      host: 192.168.112.139
+      port: 5672
+      username: test
+      password: test
+  datasource:
+    url: jdbc:mysql://192.168.112.143:3306/sdk_server?useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+    tomcat:
+      max-idle: 3
+      initial-size: 1
+      max-active: 5
+      max-wait: 5000
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:/mapper/*.xml
+server:
+  port: 8081
